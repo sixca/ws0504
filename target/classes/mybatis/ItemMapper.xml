@@ -9,8 +9,11 @@
             <if test="name != null and !name.equals('')">
                 name LIKE '%'||#{name}||'%'
             </if>
-            <if test="price != null and !price.equals('')">
-                and price >= #{price}
+            <if test="priceMin != null and !priceMin.equals('')">
+                and price &gt;= #{priceMin}
+            </if>
+            <if test="priceMax != null and !priceMax.equals('')">
+                and price &lt;= #{priceMax}
             </if>
         </where>
     </select>

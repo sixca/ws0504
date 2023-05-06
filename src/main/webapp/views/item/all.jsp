@@ -32,25 +32,42 @@
             <h6 class="m-0 font-weight-bold text-primary">Item All</h6>
             <form id="search_form" class="form-inline well">
                 <div class="form-group">
-                    <label for="name">NAME:</label>
-                    <div class="col-sm-10">
+<%--                    <label for="name">NAME:</label>--%>
+                    <label class="control-label col-sm-2" for="name">NAME:</label>
+                    <div class="col-sm-8">
                         <input type="text" name="name" class="form-control" id="name" placeholder="Enter name                                   "
                                value ="${is.name}">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-sm-2" for="price">PRICE:</label>
+                    <label class="control-label col-sm-2" for="priceMin">PRICE MIN:</label>
                     <div class="col-sm-8">
-                        <select class="form-control" name="price" id="price">
+                        <select class="form-control" name="priceMin" id="priceMin">
                             <option value="">전체</option>
-                            <option value=5000 <c:if test="${is.price==5000}">selected</c:if>>5000원 이상</option>
-                            <option value=10000 <c:if test="${is.price==10000}">selected</c:if>>10000원 이상</option>
-                            <option value=15000 <c:if test="${is.price==15000}">selected</c:if>>15000원 이상</option>
-                            <option value=20000 <c:if test="${is.price==20000}">selected</c:if>>20000원 이상</option>
-                            <option value=25000 <c:if test="${is.price==25000}">selected</c:if>>25000원 이상</option>
-                            <option value=30000 <c:if test="${is.price==30000}">selected</c:if>>30000원 이상</option>
-                            <option value=40000 <c:if test="${is.price==40000}">selected</c:if>>40000원 이상</option>
-                            <option value=50000 <c:if test="${is.price==50000}">selected</c:if>>50000원 이상</option>
+                            <option value=5000 <c:if test="${is.priceMin==5000}">selected</c:if>>5000원 이상</option>
+                            <option value=10000 <c:if test="${is.priceMin==10000}">selected</c:if>>10000원 이상</option>
+                            <option value=15000 <c:if test="${is.priceMin==15000}">selected</c:if>>15000원 이상</option>
+                            <option value=20000 <c:if test="${is.priceMin==20000}">selected</c:if>>20000원 이상</option>
+                            <option value=25000 <c:if test="${is.priceMin==25000}">selected</c:if>>25000원 이상</option>
+                            <option value=30000 <c:if test="${is.priceMin==30000}">selected</c:if>>30000원 이상</option>
+                            <option value=40000 <c:if test="${is.priceMin==40000}">selected</c:if>>40000원 이상</option>
+                            <option value=50000 <c:if test="${is.priceMin==50000}">selected</c:if>>50000원 이상</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="priceMax">PRICE MAX:</label>
+                    <div class="col-sm-8">
+                        <select class="form-control" name="priceMax" id="priceMax">
+                            <option value="">전체</option>
+                            <option value=5000 <c:if test="${is.priceMax==5000}">selected</c:if>>5000원 이하</option>
+                            <option value=10000 <c:if test="${is.priceMax==10000}">selected</c:if>>10000원 이하</option>
+                            <option value=15000 <c:if test="${is.priceMax==15000}">selected</c:if>>15000원 이하</option>
+                            <option value=20000 <c:if test="${is.priceMax==20000}">selected</c:if>>20000원 이하</option>
+                            <option value=25000 <c:if test="${is.priceMax==25000}">selected</c:if>>25000원 이하</option>
+                            <option value=30000 <c:if test="${is.priceMax==30000}">selected</c:if>>30000원 이하</option>
+                            <option value=40000 <c:if test="${is.priceMax==40000}">selected</c:if>>40000원 이하</option>
+                            <option value=50000 <c:if test="${is.priceMax==50000}">selected</c:if>>50000원 이하</option>
                         </select>
                     </div>
                 </div>

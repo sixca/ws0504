@@ -9,5 +9,6 @@ import lombok.*;
 @ToString
 public class ItemSearch {
    private String name;
-   private int price;
+   private Integer priceMin;
+   private Integer priceMax;
 }

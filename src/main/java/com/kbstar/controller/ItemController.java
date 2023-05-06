@@ -117,7 +117,7 @@ public class ItemController {
     @RequestMapping("/search")
     public String search(Model model, ItemSearch is) throws Exception {
         List<Item> list = itemService.search(is);
-        model.addAttribute("is", is);      //ms 값을 박아줘서, 화면에서 검색버튼이 눌러도 데이터가 사라지지 않고 떠있도록 구현 >> all.jsp
+        model.addAttribute("is", is);      //is 값을 박아줘서, 화면에서 검색버튼이 눌러도 데이터가 사라지지 않고 떠있도록 구현 >> all.jsp
         model.addAttribute("ilist", list);
         model.addAttribute("center", dir+"all");
         return "index";

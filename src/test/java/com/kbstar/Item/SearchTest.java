@@ -16,7 +16,7 @@ class SearchTest {
     @Test
     void contextLoads() throws Exception {
         try {
-            ItemSearch is = new ItemSearch("", 30000);
+            ItemSearch is = new ItemSearch("", 5000,30000);
             service.search(is);
         }catch (Exception e) {
             log.info("에러");
