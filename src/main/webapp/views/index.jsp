@@ -31,6 +31,14 @@
     <script src="/js/charts.js"></script>
     <%--jquery--%>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <%--카카오 지도 서비스--%>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e9081410e170dd09772430a43103fe4a"></script>
+
+    <%--  웹소켓  --%>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+
 </head>
 
 <body id="page-top">
@@ -164,6 +172,15 @@
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Live Chart</span></a>
         </li>
+        <c:if test="${loginadm != null}">
+        <li class="nav-item">
+            <a class="nav-link" href="/websocket">
+                <i class="fas fa-fw fa-chart-area"></i>
+                <span>websocket</span></a>
+        </li>
+        </c:if>>
+
+
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
 

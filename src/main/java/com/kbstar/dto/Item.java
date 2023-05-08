@@ -17,7 +17,7 @@ public class Item {
     private String imgname;
     private Date rdate;
 
-    private MultipartFile img; //추가
+    private MultipartFile img; //추가 :: imgname을 파일 덩어리 자체로 변환
 
     public Item(int id, String name, int price, String imgname, Date rdate) {
         this.id = id;

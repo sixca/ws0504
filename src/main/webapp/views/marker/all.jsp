@@ -29,11 +29,10 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Marker All</h6>
-            <form id="search_form" class="form-inline well">
-
-                 <div class="form-group">
-                     <label for="loc">Location:</label>
-                          <div class="col-sm-8">
+                <form id="search_form" class="form-inline well">
+                     <div class="form-group">
+                        <label for="loc">Location:</label>
+                        <div class="col-sm-8">
                             <select class="form-control" name="loc" id="loc">
                                 <option value="">전체</option>
                                 <option value="s" <c:if test="${ms.loc=='s'}">selected</c:if>  >서울</option>
@@ -41,20 +40,20 @@
                                 <option value="j"<c:if test="${ms.loc=='j'}">selected</c:if>>제주</option>
                             </select>
                         </div>
-                 </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="title">title:</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="title" class="form-control" id="title" placeholder="Enter title"
-                        value ="${ms.title}">
+                     </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="title">title:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="title" class="form-control" id="title" placeholder="Enter title"
+                            value ="${ms.title}">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-2">
-                        <button id="search_btn" type="button" class="btn btn-default">Search</button>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-2">
+                            <button id="search_btn" type="button" class="btn btn-default">Search</button>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
         </div>
 <%--  ID TITLE	TARGET	LAT	LNG	IMG	LOC--%>
         <div class="card-body">

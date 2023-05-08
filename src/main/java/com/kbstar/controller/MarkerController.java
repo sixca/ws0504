@@ -67,7 +67,7 @@ public class MarkerController {
         Marker marker = null;
         marker = markerService.get(id);
 
-        model.addAttribute("gitem", marker);
+        model.addAttribute("gmarker", marker);
         model.addAttribute("center", dir+"detail");
         return "index";
     }

@@ -17,7 +17,7 @@ public class Marker {
     private String img;
     private String loc;
 
-    private MultipartFile imgMarker;
+    private MultipartFile imgMarker; //추가 :: img(이미지 네임)를 파일 덩어리 자체로 변환
 
     public Marker(int id, String title, String target, double lat, double lng, String img, String loc) {
         this.id = id;

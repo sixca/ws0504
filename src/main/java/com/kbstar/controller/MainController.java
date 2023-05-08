@@ -47,6 +47,12 @@ public class MainController {
         return "redirect:/";
     }
 
+    @RequestMapping("/websocket")
+    public String websocket(Model model){
+        model.addAttribute("center", "websocket");
+        return "index";
+    }
+
     @RequestMapping("/loginimpl")
     public String loginimpl(Model model, String id, String pwd
             ,HttpSession session) throws Exception {      //로그인 성공 시 session에다가 넣어둔다

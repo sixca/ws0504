@@ -98,10 +98,10 @@ public class ItemController {
 //        log.info(imgname);   // 이미지 이름 끄집어 내졌는지 체크.
 //        log.info("-----------------------------------------");
 
-        if (new_imgname.equals("") || new_imgname == null) {   //기존 이미지를 그대로 쓰겠다
+        if (new_imgname.equals("") || new_imgname == null) {   //이미지 지정이 따로 없으면, 기존 이미지를 그대로 쓰겠다
             itemService.modify(item);
         }else {
-            item.setImgname(new_imgname); //아니면 (새 이미지를 선택했다면) item 전체 업데이트 쳐라.
+            item.setImgname(new_imgname); //아니면 (새 이미지를 지정했다면) item 전체 업데이트 쳐라.
             itemService.modify(item);
             FileUploadUtil.saveFile(mf, imgdir);     // 경로에 업로드
         }
@@ -114,13 +114,28 @@ public class ItemController {
         return "redirect:/item/all";
     }
 
+
     @RequestMapping("/search")
     public String search(Model model, ItemSearch is) throws Exception {
-        List<Item> list = itemService.search(is);
-        model.addAttribute("is", is);      //is 값을 박아줘서, 화면에서 검색버튼이 눌러도 데이터가 사라지지 않고 떠있도록 구현 >> all.jsp
+        log.info("-----------------------------------------");
+        log.info(is.getStartdate());
+        log.info(is.getEnddate());
+        log.info("-----------------------------------------");
+
+        List<Item> list = null;
+        list = itemService.search(is);
+        model.addAttribute("is", is);   // 원상복귀하기 위해 넣음
         model.addAttribute("ilist", list);
         model.addAttribute("center", dir+"all");
         return "index";
     }
 
+//    @RequestMapping("/search")
+//    public String search(Model model, ItemSearch is) throws Exception {
+//        List<Item> list = itemService.search(is);
+//        model.addAttribute("is", is);      //is 값을 박아줘서, 화면에서 검색버튼이 눌러도 데이터가 사라지지 않고 떠있도록 구현 >> all.jsp
+//        model.addAttribute("ilist", list);
+//        model.addAttribute("center", dir+"all");
+//        return "index";
+//    }
 }
